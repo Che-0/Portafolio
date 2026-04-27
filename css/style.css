@@ -132,6 +132,43 @@ body, .navbar, .card, .btn, .section-surface, .contact-card {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
 }
 
+.section-projects {
+    position: relative;
+    background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(7, 17, 31, 0.42) 10%, #0b1220 100%);
+}
+
+.section-projects::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -1px;
+    height: 80px;
+    background: linear-gradient(180deg, rgba(7, 17, 31, 0) 0%, rgba(7, 17, 31, 0.28) 45%, rgba(11, 18, 32, 0.72) 100%);
+    pointer-events: none;
+}
+
+.section-projects .container {
+    position: relative;
+    z-index: 1;
+}
+
+.section-projects .section-title,
+.section-projects h2,
+.section-projects .card-title,
+.section-projects .card-text {
+    color: #f8fbff;
+}
+
+.section-projects .card-text {
+    color: rgba(248, 251, 255, 0.72);
+}
+
+.section-projects .project-card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.03));
+}
+
 .section-title {
     font-size: clamp(1.8rem, 2.4vw, 3rem);
 }
@@ -188,6 +225,45 @@ body, .navbar, .card, .btn, .section-surface, .contact-card {
     object-fit: cover;
 }
 
+.project-preview-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-preview-wrap::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(3, 9, 20, 0) 42%, rgba(3, 9, 20, 0.38) 100%);
+    pointer-events: none;
+}
+
+.project-preview {
+    transform: scale(1.01);
+    transition: transform 260ms ease;
+}
+
+.project-card:hover .project-preview {
+    transform: scale(1.06);
+}
+
+.project-preview-tag {
+    position: absolute;
+    top: 0.85rem;
+    left: 0.85rem;
+    z-index: 2;
+    display: inline-block;
+    padding: 0.26rem 0.62rem;
+    border-radius: 999px;
+    border: 1px solid rgba(125, 211, 252, 0.4);
+    background: rgba(7, 17, 31, 0.72);
+    color: #d8f3ff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
 #carouselSobreMi {
     border-radius: 24px;
     overflow: hidden;
@@ -241,6 +317,7 @@ body, .navbar, .card, .btn, .section-surface, .contact-card {
 .card-title,
 .card-text {
     color: var(--text);
+    
 }
 
 .card-text {
